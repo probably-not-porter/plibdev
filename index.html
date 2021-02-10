@@ -1,0 +1,200 @@
+<html>
+	<head>
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+			body{
+				position: absolute;
+				margin: 0;
+				width: 100vw;
+				height: 100vh;
+				background-color: black;
+				overflow: hidden;
+			}
+			#static{
+				opacity: 0.3;
+				float: left;
+				position: fixed;
+				z-index: -1;
+				width: 100%;
+				height: 100%;
+				background: url("bg2.gif") no-repeat center center fixed;
+				-webkit-background-size: cover;
+				-moz-background-size: cover;
+				-o-background-size: cover;
+				background-size: cover;
+			}
+			*{
+				color: white;
+				font-family: 'Major Mono Display', monospace;
+			}
+			a{
+				text-decoration: none;
+			}
+			a:hover{
+				text-decoration: underline dotted white;
+				font-weight: 900;
+			}
+			#nav{
+				list-style-type: none;
+				line-height: 1.5em;
+				width: 200px;
+				font-size: 20px;
+			}
+			.subnav{
+				list-style-type: none;
+				line-height: 1.5em;
+			}
+			.block{
+				margin-left: 20px;
+				border: 1px solid white;
+				display: inline-block;
+				padding: 10px;
+				background-color: rgba(255,255,255,0.1);
+			}
+			h1{
+				margin-left: 20px;
+				text-decoration: underline dotted white;
+			}
+			.social{
+				color: white;
+				text-align: center;
+				padding-top: 5px;
+				font-size: 30px;
+				height: 100%;
+				transition-duration: 500ms;
+				cursor: pointer;
+				display: inline-block;
+				float: right;
+				line-height: 40px;
+				margin-left:10px;
+			}
+			.social:hover{
+				transition-duration: 500ms;
+				transform: translateY(5px);
+			}
+			.col1{
+				height: 100%;
+				display: inline-block;
+				padding-top: 10px;
+			}
+			.col2{
+				display: inline-block;
+				position: absolute;
+				margin-left: 50px;
+				margin-right: 50px;
+				padding-top: 50px;
+				padding-bottom: 100px;
+			}
+			.article{
+				background:rgba(255,255,255,0.1);
+				border: 1px solid white;
+				margin-bottom: 50px;
+				padding: 20px;
+			}
+			.title{
+				font-size: 24px;
+				border-bottom: 1px dashed white;
+			}
+			.scroll-box{
+				overflow:scroll;
+				position:absolute;
+				width: 100vw;
+				height: 100vh;
+			}
+			.top{
+				display:inline-block;
+				height: 40px;
+				width: 96vw;
+				margin-left: 1vw;
+				margin-right: 3vw;
+				border-bottom: 1px dashed white;
+			}
+			h1{
+				width: 200px;
+			}
+			.head{
+				display: inline-block;
+				font-size: 30px;
+			}
+			.active a{
+				color: lightpink !important;
+			}
+			ul{
+				border-top: 1px solid rgba(255, 255, 255, 0.301);
+			}
+		</style>
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+	<body>
+		<div id='static'></div>
+		<div class='top'>
+			<div class='head'>
+				Pseudosphere
+			</div>
+			
+			<div class='social'>
+				<i class="fa fa-twitter"></i>
+			</div>
+			<div class='social'>
+				<i class="fa fa-instagram"></i>
+			</div>
+			<div class='social'>
+				<i class="fa fa-github"></i>
+			</div>
+			<div class='social'>
+				<i class="fa fa-soundcloud"></i>
+			</div>
+		</div>
+		
+		<div class='scroll-box'>
+			<div class='col1'>
+				<div class='block'>
+					<ul id='nav'>
+						<li class='active'><a href="">Blog</a></li>
+						<li><a href="">Music</a></li>
+						<li><a href="">Art</a></li>
+						<li><a href="">Fish</a></li>
+					</ul>
+					<ul id='nav'>
+						<li><a href="">Dex</a></li>
+						<li><a href="">Chattmapp</a></li>
+						<li><a href="">Orbit</a></li>
+						<li><a href="">Spellbound</a></li>
+						<li><a href="">Terry</a></li>
+						<li><a href="">Beatbot</a></li>
+					</ul>
+					<ul id='nav'>
+						<li><a href="">Galaxy.io</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class='col2'>
+				<div class='blog'>
+					<div class='article'>
+						<span class='title'>Fuck - Oct 17</span><br><br>
+						<p1>I have no idea what I'm doing. I have no idea what I'm doing. I have no idea what I'm doing. 
+							I have no idea what I'm doing. I have no idea what I'm doing. I have no idea what I'm doing. 
+							I have no idea what I'm doing. I have no idea what I'm doing. I have no idea what I'm doing. 
+							I have no idea what I'm doing. I have no idea what I'm doing. I have no idea what I'm doing. 
+							I have no idea what I'm doing. I have no idea what I'm doing. I have no idea what I'm doing. 
+							I have no idea what I'm doing. I have no idea what I'm doing. I have no idea what I'm doing. 
+							I have no idea what I'm doing. I have no idea what I'm doing.</p1>
+					</div>
+				</div>
+				<div class='galaxy'>
+					<iframe width='800vw' height='500vw' src='https://probably-not-porter.github.io/galaxy.io/platforms/browser/www/index.html'></iframe>
+					<br><br>
+				</div>
+				<div class='music'>
+					<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/903220753&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/porter-libby" title="p_t_o_" target="_blank" style="color: #cccccc; text-decoration: none;">p_t_o_</a> · <a href="https://soundcloud.com/porter-libby/watch-me" title="watch me" target="_blank" style="color: #cccccc; text-decoration: none;">watch me</a></div>
+					<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/813789505&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/porter-libby" title="p_t_o_" target="_blank" style="color: #cccccc; text-decoration: none;">p_t_o_</a> · <a href="https://soundcloud.com/porter-libby/do-me-wrong" title="do me wrong" target="_blank" style="color: #cccccc; text-decoration: none;">do me wrong</a></div>
+					<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/815277577&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/porter-libby" title="p_t_o_" target="_blank" style="color: #cccccc; text-decoration: none;">p_t_o_</a> · <a href="https://soundcloud.com/porter-libby/tired-of-being-blue" title="tired of being blue" target="_blank" style="color: #cccccc; text-decoration: none;">tired of being blue</a></div>
+					<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/871976200&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/porter-libby" title="p_t_o_" target="_blank" style="color: #cccccc; text-decoration: none;">p_t_o_</a> · <a href="https://soundcloud.com/porter-libby/blind" title="blind" target="_blank" style="color: #cccccc; text-decoration: none;">blind</a></div>
+					<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/653573543&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/porter-libby" title="p_t_o_" target="_blank" style="color: #cccccc; text-decoration: none;">p_t_o_</a> · <a href="https://soundcloud.com/porter-libby/summer-pt-3" title="Summer Pt 3" target="_blank" style="color: #cccccc; text-decoration: none;">Summer Pt 3</a></div>
+					
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
