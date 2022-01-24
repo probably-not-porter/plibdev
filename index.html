@@ -70,7 +70,6 @@
 			}
 			.col1{
 				height: 99%;
-				display: inline-block;
 				padding-top: 10px;
 				margin-bottom: 50px;
 			}
@@ -101,9 +100,9 @@
 			.top{
 				display:inline-block;
 				height: 40px;
-				width: 96vw;
-				margin-left: 1vw;
-				margin-right: 3vw;
+				width: 100vw;
+				padding-right: 2vw;
+				padding-left: 2vw;
 				border-bottom: 1px dashed white;
 			}
 			h1{
@@ -121,6 +120,24 @@
 				color: rgba(255, 255, 255, 0.8);
 				font-size:12px;
 			}
+			#tag{
+				position: absolute;
+				bottom: 10px;
+				right: 10px;
+				font-size: 10px;
+			}
+			.letter{
+				transition-duration: 100ms;
+				display:inline-block;
+				border-top: 10px solid transparent;
+    			margin-top: -10px; /* equal to border width */
+			}
+			.letter:hover{
+				color: blue;
+				cursor:default;
+				transition-duration: 100ms;
+				transform: scaleX(-1);
+			}
 		</style>
 
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -129,10 +146,9 @@
 		<div id='static'></div>
 		<div class='top'>
 			<div class='head'>
-				Centrarchidae
+				<span class='letter'>C</span><span class='letter'>e</span><span class='letter'>n</span><span class='letter'>t</span><span class='letter'>r</span><span class='letter'>a</span><span class='letter'>r</span><span class='letter'>c</span><span class='letter'>h</span><span class='letter'>i</span><span class='letter'>d</span><span class='letter'>a</span><span class='letter'>e</span>
 			</div>
 		</div>
-		
 		<div class='scroll-box'>
 			<div class='col1'>
 				<div class='block'>
@@ -162,11 +178,9 @@
 							<li><img src='icon/ec-ifs.png' style='height:16px;width:16px;margin-right:10px;'><a href="http://cluster.earlham.edu:9900/">IFS Datavis</a></li>
 						</ul>
 					</ul>
-					
 				</div>
 			</div>
-			<div class='col2'>
-			</div>
 		</div>
+		<div id='tag'>© Porter Libby 2022</div>
 	</body>
 </html>
