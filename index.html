@@ -69,9 +69,10 @@
 				transform: translateY(5px);
 			}
 			.col1{
-				height: 100%;
+				height: 99%;
 				display: inline-block;
 				padding-top: 10px;
+				margin-bottom: 50px;
 			}
 			.col2{
 				display: inline-block;
@@ -92,10 +93,10 @@
 				border-bottom: 1px dashed white;
 			}
 			.scroll-box{
-				overflow:scroll;
+				overflow-y: scroll;
 				position:absolute;
 				width: 100vw;
-				height: 100vh;
+				max-height: 100%;
 			}
 			.top{
 				display:inline-block;
@@ -137,22 +138,21 @@
 				<div class='block'>
 					<img src='img/shedinja.png' style='width: 100px; height: 100px; display: block; margin-left: auto; margin-right: auto;'>
 					<ul id='nav'>
+						<li><a href="blog.html">Blog</a></li>
+						<li><a href="music.html">Music</a></li>
+						<br>
 						<li>Social</li>
 						<ul>
 							<li><img src='icon/twitter.png' style='height:16px;width:16px;margin-right:10px;'><a href="https://twitter.com/____porter____">Twitter</a></li>
 							<li><img src='icon/github.png' style='height:16px;width:16px;margin-right:10px;'><a href="https://github.com/probably-not-porter">Github</a></li>
 						</ul>
 						<br>
-						<li>Websites</li>
+						<li>Projects</li>
 						<ul>
 							<li><img src='icon/dexter.png' style='height:16px;width:16px;margin-right:10px;'><a href="https://www.dexter.centrarchidae.net/">Dexter</a></li>
 							<li><img src='icon/combatdex.png' style='height:16px;width:16px;margin-right:10px;'><a href="https://www.combatdex.centrarchidae.net/">Combat Dex</a></li>
 							<li><img src='icon/items.png' style='height:16px;width:16px;margin-right:10px;'><a href="https://www.items.centrarchidae.net/">Random Items</a></li>
 							<li><img src='icon/machi-koro.png' style='height:16px;width:16px;margin-right:10px;'><a href="http://mk.centrarchidae.net/">Machi Koro</a></li>
-						</ul>
-						<br>
-						<li>Projects</li>
-						<ul>
 							<li><img src='icon/orbit.png' style='height:16px;width:16px;margin-right:10px;'><a href="https://github.com/probably-not-porter/orbit">Orbit</a></li>
 							<li><img src='icon/galaga.png' style='height:16px;width:16px;margin-right:10px;'><a href="https://github.com/probably-not-porter/galaga-sprites">8bit Sprites</a></li>
 							<li><img src='icon/spellbound.png' style='height:16px;width:16px;margin-right:10px;'><a href="https://spellbound-game.github.io/spellbound-html/">SpellBound</a></li>
@@ -169,23 +169,6 @@
 				</div>
 			</div>
 			<div class='col2'>
-				<div class='blog'>
-					<div class='article'>
-						<span class='title'>Terminal Arena - Jan 7 / 2022</span><br><br>
-						<p1>Designing a GUI in the terminal is tricky. I've been working on making a dwarf-fortress-style dungeon crawler based on DnD 3.5 rules, and I've found a simple system of arranging and drawing 2d arrays to create interface panels. This would be resource intensive with a reasonable frame-rate, but since this is a turn-based step-based kind of game, it seems to work fine.</p1>
-						<br><br>
-						<p1>The system for generating dungeons is stupifyingly simple; basically just a randomized proximity walk. I think it would benefit from some more complexity, so I may add conditions to the generation later. It would be nice to have rectilinear features mixed in.</p1>
-						<br><br>
-						<img src='img/Screen Shot 2022-01-07 at 11.27.09 AM.png' style='max-width: 100%;'>
-					</div>
-					<div class='article'>
-						<span class='title'>Fish - Jan 5 / 2022</span><br><br>
-						<p1>Centrarchidae is the family name for sunfish. I have always named my computers after fish to keep track of them, so it only made sense that my aggregation website would be an aggregation of fishes.</p1>
-						<br>
-						<p1>I make websites and stuff.</p1>
-					</div>
-				</div>
-				</div>
 			</div>
 		</div>
 	</body>
