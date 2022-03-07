@@ -89,8 +89,8 @@
 				position:absolute;
 				top: 0px;
 				padding-top: 50px;
-				margin-bottom: 300px;
-				font-size: 20px;
+				padding-bottom: 1000px;
+				font-size: 15px;
 			}
 			a{
 				color: white;
@@ -139,43 +139,85 @@
 				transition-duration: 100ms;
 				transform: scaleX(-1);
 			}
+			#pkmn{
+				position: fixed;
+				bottom: 0px;
+				z-index: -1;
+				animation-name: moveleft;
+				animation-timing-function: linear;
+				animation-iteration-count: infinite;
+  				animation-duration: 120s;
+				width: 10000vw;
+			}
+			@keyframes moveleft {
+				from {
+					margin-left:0px;
+				}
+				to {
+					margin-left:-580vw;
+				}
+			}
+			#pkmn img{
+				display: inline-block;
+				margin-top:0;
+				margin-left: 110vw;
+			}
 		</style>
 
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	</head>
 	<body>
+		<div id="pkmn">
+			<img src='https://img.pokemondb.net/sprites/black-white/anim/normal/shedinja.gif'>
+			<img src='https://img.pokemondb.net/sprites/black-white/anim/normal/wooper.gif'>
+			<img src='https://img.pokemondb.net/sprites/black-white/anim/normal/flygon.gif'>
+			<img src='https://img.pokemondb.net/sprites/black-white/anim/normal/umbreon.gif'>
+			<img src='https://img.pokemondb.net/sprites/black-white/anim/normal/mudkip.gif'>
+
+		</div>
 		<div id='static'></div>
-		<img src='img/shedinja.png' style='position: absolute;z-index:1000;width: 100px; height: 100px; right: 0px;'>
 		<div class='top'>
 			<div class='head'>
 				<span class='letter'>C</span><span class='letter'>e</span><span class='letter'>n</span><span class='letter'>t</span><span class='letter'>r</span><span class='letter'>a</span><span class='letter'>r</span><span class='letter'>c</span><span class='letter'>h</span><span class='letter'>i</span><span class='letter'>d</span><span class='letter'>a</span><span class='letter'>e</span>
 			</div>
 		</div>
 		<div class='scroll-box'>
-			<ul id='nav'>
+			<ul id='nav' style="margin-bottom:100px">
 				<li>Links</li>
-				<ul>
+				<ul class='subnav'>
 					<li><img src='icon/twitter.png' style='height:16px;width:16px;margin-right:10px;'><a href="https://twitter.com/____porter____">Twitter</a></li>
 					<li><img src='icon/github.png' style='height:16px;width:16px;margin-right:10px;'><a href="https://github.com/probably-not-porter">Github</a></li>
 				</ul>
 				<br>
 				<li>Projects</li>
-				<ul>
+				<ul class='subnav'>
 					<li><img src='icon/dexter.png' style='height:16px;width:16px;margin-right:10px;'><a href="https://www.dexter.centrarchidae.net/">Dexter</a></li>
 					<li><img src='icon/combatdex.png' style='height:16px;width:16px;margin-right:10px;'><a href="https://www.combatdex.centrarchidae.net/">Combat Dex</a></li>
-					<li><img src='icon/items.png' style='height:16px;width:16px;margin-right:10px;'><a href="https://www.items.centrarchidae.net/">Random Items</a></li>
+					<li><img src='icon/items.png' style='height:16px;width:16px;margin-right:10px;'><a href="https://www.items.centrarchidae.net/">Random Items (WIP)</a></li>
 					<li><img src='icon/machi-koro.png' style='height:16px;width:16px;margin-right:10px;'><a href="http://mk.centrarchidae.net/">Machi Koro</a></li>
 					<li><img src='icon/solarpolar.png' style='height:16px;width:16px;margin-right:10px;'><a href="https://probably-not-porter.github.io/solar-polar/">Solar Polar</a></li>
 					<li><img src='icon/orbit.png' style='height:16px;width:16px;margin-right:10px;'><a href="https://github.com/probably-not-porter/orbit">Orbit.py</a></li>
 					<li><img src='icon/galaga.png' style='height:16px;width:16px;margin-right:10px;'><a href="https://github.com/probably-not-porter/galaga-sprites">8bit Sprites</a></li>
 					<li><img src='icon/spellbound.png' style='height:16px;width:16px;margin-right:10px;'><a href="https://spellbound-game.github.io/spellbound-html/">SpellBound</a></li>
-					<li><img src='icon/arena.png' style='height:16px;width:16px;margin-right:10px;'><a href="https://github.com/probably-not-porter/arena">Arena.py</a></li>
+					<li><img src='icon/arena.png' style='height:16px;width:16px;margin-right:10px;'><a href="https://github.com/probably-not-porter/arena">Arena.py (WIP)</a></li>
+					<li><img src='icon/fish.png' style='height:16px;width:16px;margin-right:10px;'><a href="https://github.com/probably-not-porter/fishtank-sim">Fishtank Sim (WIP)</a></li>
+
 				</ul>
 				<br>
 				<li>Research</li>
-				<ul>
-					<li><img src='icon/ml.png' style='height:16px;width:16px;margin-right:10px;'><a href="https://github.com/probably-not-porter/CEML">CEML v2</a></li>
-					<li><img src='icon/ec-ifs.png' style='height:16px;width:16px;margin-right:10px;'><a href="http://cluster.earlham.edu:9900/">IFS Datavis</a></li>
+				<ul class='subnav'>
+					<li>Composit Edge ML</li>
+					<uL>
+						<li><img src='icon/ml.png' style='height:16px;width:16px;margin-right:10px;'><a href="https://github.com/probably-not-porter/CEML">Code</a></li>
+						<li><img src='icon/ml.png' style='height:16px;width:16px;margin-right:10px;'><a href="https://raw.githubusercontent.com/probably-not-porter/CEML/master/2020_Paper_Final.pdf">Paper</a></li>
+						<li><img src='icon/ml.png' style='height:16px;width:16px;margin-right:10px;'><a href="https://docs.google.com/spreadsheets/d/1N-e_vyrJXN3rbJQCPIjlvAqpcz-cNIcehn_mqzDBfZk/edit?usp=sharing">Results</a></li>
+					</uL>
+					<li>Icelandic Field Studies</li>
+					<uL>
+						<li><img src='icon/ec-ifs.png' style='height:16px;width:16px;margin-right:10px;'><a href="https://fieldscience.cs.earlham.edu/">Blog</a></li>
+						<li><img src='icon/ec-ifs.png' style='height:16px;width:16px;margin-right:10px;'><a href="http://cluster.earlham.edu/artifacts/">Artifacts</a></li>
+						<li><img src='icon/ec-ifs.png' style='height:16px;width:16px;margin-right:10px;'><a href="http://cluster.earlham.edu:9900/">Datavis v2</a></li>
+					</uL>
 				</ul>
 			</ul>
 		</div>
