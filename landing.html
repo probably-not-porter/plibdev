@@ -28,14 +28,17 @@
 
             img.src = url+"/favicon.ico";
         }   
-        isSiteOnline("http://dash.grayling.home/",function(found){
-            if(found) {
-                window.location.replace("http://dash.grayling.home/");
-            }
-            else {
-                window.location.replace("https://www.plib.dev/");
-            }
-        })
+        setTimeout(() => {
+            isSiteOnline("http://dash.grayling.home/",function(found){
+                if(found) {
+                    window.location.replace("http://dash.grayling.home/");
+                }
+                else {
+                    window.location.replace("https://www.plib.dev/");
+                }
+            })
+        }, "1000")
+        
     </script>
 </body>
 </html>
