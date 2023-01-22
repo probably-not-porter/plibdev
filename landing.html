@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+</head>
+<body>
+    <script>
+        function isSiteOnline(url,callback) {
+            // try to load favicon
+            var timer = setTimeout(function(){
+                // timeout after 5 seconds
+                callback(false);
+            },5000)
+
+            var img = document.createElement("img");
+            img.onload = function() {
+                clearTimeout(timer);
+                callback(true);
+            }
+
+            img.onerror = function() {
+                clearTimeout(timer);
+                callback(false);
+            }
+
+            img.src = url+"/favicon.ico";
+        }   
+        isSiteOnline("http://dash.grayling.home/",function(found){
+            if(found) {
+                window.location.replace("http://dash.grayling.home/");
+            }
+            else {
+                window.location.replace("https://www.plib.dev/");
+            }
+        })
+    </script>
+</body>
+</html>
