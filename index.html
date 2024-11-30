@@ -22,21 +22,9 @@
 				height: 100%;
 				background-color: black;
 			}
-			#static{
-				opacity: 0.1;
-				float: left;
-				position: fixed;
-				z-index: -1;
-				width: 100%;
-				height: 100%;
-				-webkit-background-size: cover;
-				-moz-background-size: cover;
-				-o-background-size: cover;
-				background-size: cover;
-			}
 			*{
 				color: white;
-				font-family: 'Major Mono Display', monospace;
+				font-family: monospace;
 			}
 			a{
 				text-decoration: none;
@@ -47,56 +35,13 @@
 				transition-duration: 500ms;
 				text-decoration: underline dotted white;
 			}
-			.block{
-				margin-left: 20px;
-				border: 1px solid white;
-				display: inline-block;
-				padding: 10px;
-				background-color: rgba(255,255,255,0.1);
-			}
 			h1{
 				margin-left: 20px;
 				text-decoration: underline dotted white;
 			}
-			.social{
-				color: white;
-				text-align: center;
-				padding-top: 5px;
-				font-size: 30px;
-				height: 100%;
-				transition-duration: 500ms;
-				cursor: pointer;
-				display: inline-block;
-				float: right;
-				line-height: 40px;
-				margin-left:10px;
-			}
-			.social:hover{
-				transition-duration: 500ms;
-				transform: translateY(5px);
-			}
-			.col1{
-				height: 99%;
-				padding-top: 10px;
-				margin-bottom: 50px;
-			}
-			.article{
-				background:rgba(255,255,255,0.1);
-				border: 1px solid white;
-				margin-bottom: 50px;
-				padding: 20px;
-			}
 			.title{
 				font-size: 24px;
 				border-bottom: 1px dashed white;
-			}
-			.scroll-box{
-				width: 100vw;
-				height: 100%;
-				position:absolute;
-				top: 0px;
-				padding-top: 50px;
-				font-size: 15px;
 			}
 			a{
 				color: white;
@@ -106,8 +51,6 @@
 				color: rgb(184, 184, 184);
 			}
 			.top{
-				position:absolute;
-				z-index:5;
 				display:inline-block;
 				height: 50px;
 				width: 89vw;
@@ -124,6 +67,7 @@
 				display: inline-block;
 				font-size: 30px;
 				width: 100%;
+				font-family: 'Major Mono Display', monospace;
 			}
 			.active a{
 				color: lightpink !important;
@@ -134,117 +78,46 @@
 				right: 10px;
 				font-size: 10px;
 			}
-			.letter{
-				
-				
-				border-top: 10px solid transparent;
-    			margin-top: -10px; /* equal to border width */
-			}
-			.char{
-				transition-duration: 100ms;
-				display:inline-block;
-				
-
-			}
-			.letter:hover .char{
-				color: blue;
-				transition-duration: 100ms;
-				transform: scaleX(-1);
-			}
-			#pkmn{
-				position: fixed;
-				bottom: 0px;
-				z-index: -1;
-				animation-name: moveleft;
-				animation-timing-function: linear;
-				animation-iteration-count: infinite;
-  				animation-duration: 120s;
-				width: 10000vw;
-			}
-			@keyframes moveleft {
-				from {
-					margin-left:0px;
-				}
-				to {
-					margin-left:-580vw;
-				}
-			}
-			#pkmn img{
-				display: inline-block;
-				margin-top:0;
-				margin-left: 110vw;
-			}
 		</style>
 
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	</head>
 	<body>
-		<div id="pkmn">
-			<img alt='pokemon' src='https://img.pokemondb.net/sprites/black-white/anim/normal/shedinja.gif'>
-			<img alt='pokemon' src='https://img.pokemondb.net/sprites/black-white/anim/normal/shedinja.gif'>
-			<img alt='pokemon'src='https://img.pokemondb.net/sprites/black-white/anim/normal/shedinja.gif'>
-		</div>
-		<div id='static'></div>
 		<div class='top'>
 			<div class='head'>
-				<span class='letter'><span class='char'>P</span></span>
-				<span class='letter'><span class='char'>L</span></span>
-				<span class='letter'><span class='char'>I</span></span>
-				<span class='letter'><span class='char'>B</span></span>
-				<span class='letter'><span class='char'>.</span></span>
-				<span class='letter'><span class='char'>D</span></span>
-				<span class='letter'><span class='char'>E</span></span>
-				<span class='letter'><span class='char'>V</span></span>
+				PLIB.DEV
 			</div>
 		</div>
 		<div class='scroll-box'>
 			<ul id='nav' style="margin-bottom:100px">
-				<li><img src='icon/github.png' style='height:16px;width:16px;margin-right:10px;'><a href="https://github.com/probably-not-porter">Github</a></li>
+				<li>Social</li>
 				<ul class='subnav'>
-					
+					<li><img src='icon/github.png' style='height:16px;width:16px;margin-right:10px;'><a href="https://github.com/probably-not-porter">Github</a></li>
+					<li><img src='icon/instagram.png' style='height:16px;width:16px;margin-right:10px;'><a href="https://www.instagram.com/probably_not_porter">Instagram</a></li>
 				</ul>
 				<br>
-				<li>Art Projects</li>
+				<li>Projects</li>
 				<ul class='subnav'>
-					<li><img src='icon/generative.png' style='height:16px;width:16px;margin-right:10px;'><a href="https://genart.plib.dev/">Generative Art</a></li>
-				</ul>
-				<br>
-				<li>Web Stuff</li>
-				<ul class='subnav'>
-										
+					<li><img src='icon/generative.png' style='height:16px;width:16px;margin-right:10px;'><a href="https://genart.plib.dev/">Generative Art</a></li>		
 					<li><img src='icon/anybin.png' style='height:16px;width:16px;margin-right:10px;'><a href="https://anybin.plib.dev/">Anybin</a></li>
 					<li><img src='icon/mtgpaste.png' style='height:16px;width:16px;margin-right:10px;'><a href="https://mtgpaste.plib.dev/">MTGPaste</a></li>
 					<li><img src='icon/items.png' style='height:16px;width:16px;margin-right:10px;'><a href="https://items.plib.dev">Random Items</a></li>
 					<li><img src='icon/movietime.png' style='height:16px;width:16px;margin-right:10px;'><a href="https://movietime.plib.dev">Movie Time Spinner</a></li>
 					<li><img src='https://images.emojiterra.com/google/android-12l/512px/1f5ff.png' style='height:16px;width:16px;margin-right:10px;'><a href="https://chad.plib.dev">Chad Detector</a></li>
 					<li><img src='icon/radio.png' style='height:16px;width:16px;margin-right:10px;'><a href="https://radio.plib.dev">Radio Button Olympics</a></li>
-				</ul>
-				<br>
-				<li>Games</li>
-				<ul class='subnav'>
 					<li><img src='icon/spellbound.png' style='height:16px;width:16px;margin-right:10px;'><a href="https://spellbound-game.github.io/spellbound-html/">SpellBound</a></li>
-					<li><img src='icon/d-compose.png' style='height:16px;width:16px;margin-right:10px;'><a href="https://dcompose.plib.dev">d.Compose</a></li>
 					<li><img src='icon/mud.png' style='height:16px;width:16px;margin-right:10px;'><a href="https://mudjs.plib.dev/">Mud.JS</a></li>
-				</ul>
-				<br>
-				<li>Pokemon Tools</li>
-				<ul class='subnav'>
 					<li><img src='icon/dexter.png' style='height:16px;width:16px;margin-right:10px;'><a href="https://dexter.plib.dev">Dexter</a></li>
 					<li><img src='icon/livingdex.png' style='height:16px;width:16px;margin-right:10px;'><a href="https://livingdex.plib.dev">Living Dex</a></li>
 					<li><img src='icon/combatdex.png' style='height:16px;width:16px;margin-right:10px;'><a href="https://combatdex.plib.dev">Combat Dex</a></li>
 					<li><img src='icon/typefinder.png' style='height:16px;width:16px;margin-right:10px;'><a href="https://dexquiz.plib.dev/">Pokedex Quiz</a></li>
-				</ul>
-				<br>
-				<li>Other Code Projects</li>
-				<ul class='subnav'>
 					<li><img src='icon/arena.png' style='height:16px;width:16px;margin-right:10px;'><a href="https://github.com/probably-not-porter/arena">Arena.py</a></li>
 					<li><img src='icon/fish.png' style='height:16px;width:16px;margin-right:10px;'><a href="https://github.com/probably-not-porter/fishtank-sim">Fishtank Sim</a></li>
 					<li><img src='icon/orbit.png' style='height:16px;width:16px;margin-right:10px;'><a href="https://github.com/probably-not-porter/orbit">Orbit.py</a></li>
 					<li><img src='icon/galaga.png' style='height:16px;width:16px;margin-right:10px;'><a href="https://github.com/probably-not-porter/galaga-sprites">8-bit Sprites</a></li>
-					
 				</ul>
 				<br>
-				<li>Research</li>
+				<!-- <li>Research</li>
 				<ul class='subnav'>
 					<li>Composit Edge ML</li>
 					<uL>
@@ -256,7 +129,7 @@
 					<uL>
 						<li><img src='icon/ec-ifs.png' style='height:16px;width:16px;margin-right:10px;'><a href="https://fieldscience.cs.earlham.edu/">Blog</a></li>
 					</uL>
-				</ul>
+				</ul> -->
 			</ul>
 		</div>
 		<div id='tag'>Porter Libby 2024</div>
