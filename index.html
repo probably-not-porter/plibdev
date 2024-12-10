@@ -47,8 +47,17 @@
 				color: white;
 				cursor: pointer;
 			}
+			ul{
+				list-style-type: none; /* Remove bullets */
+				padding-left: 20px;
+			}
 			li{
 				color: rgb(184, 184, 184);
+				margin: 2px;
+				width: 220px;
+			}
+			li:hover .icon{
+				animation: flip-icon 1s infinite;
 			}
 			.top{
 				display:inline-block;
@@ -78,6 +87,24 @@
 				right: 10px;
 				font-size: 10px;
 			}
+			.icon{
+  				display: inline-block;
+				height:16px;
+				width:16px;
+				margin-right:10px;
+			}
+			@keyframes flip-icon {
+				0% {
+					transform: rotateY(0deg);
+				}
+				50% {
+					transform: rotateY(180deg);
+				}
+				100% {
+					transform: rotateY(359deg);
+				}
+			}
+			
 		</style>
 
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -92,42 +119,42 @@
 			<ul id='nav' style="margin-bottom:100px">
 				<li>Social</li>
 				<ul class='subnav'>
-					<li><img src='icon/github.png' style='height:16px;width:16px;margin-right:10px;'><a href="https://github.com/probably-not-porter">Github</a></li>
-					<li><img src='icon/instagram.png' style='height:16px;width:16px;margin-right:10px;'><a href="https://www.instagram.com/probably_not_porter">Instagram</a></li>
+					<li><img src='icon/github.png' class='icon'><a href="https://github.com/probably-not-porter">Github</a></li>
+					<li><img src='icon/instagram.png' class='icon'><a href="https://www.instagram.com/probably_not_porter">Instagram</a></li>
 				</ul>
 				<br>
 				<li>Projects</li>
 				<ul class='subnav'>
-					<li><img src='icon/generative.png' style='height:16px;width:16px;margin-right:10px;'><a href="https://genart.plib.dev/">Generative Art</a></li>		
-					<li><img src='icon/anybin.png' style='height:16px;width:16px;margin-right:10px;'><a href="https://anybin.plib.dev/">Anybin</a></li>
-					<li><img src='icon/mtgpaste.png' style='height:16px;width:16px;margin-right:10px;'><a href="https://mtgpaste.plib.dev/">MTGPaste</a></li>
-					<li><img src='icon/items.png' style='height:16px;width:16px;margin-right:10px;'><a href="https://items.plib.dev">Random Items</a></li>
-					<li><img src='icon/movietime.png' style='height:16px;width:16px;margin-right:10px;'><a href="https://movietime.plib.dev">Movie Time Spinner</a></li>
-					<li><img src='https://images.emojiterra.com/google/android-12l/512px/1f5ff.png' style='height:16px;width:16px;margin-right:10px;'><a href="https://chad.plib.dev">Chad Detector</a></li>
-					<li><img src='icon/radio.png' style='height:16px;width:16px;margin-right:10px;'><a href="https://radio.plib.dev">Radio Button Olympics</a></li>
-					<li><img src='icon/spellbound.png' style='height:16px;width:16px;margin-right:10px;'><a href="https://spellbound-game.github.io/spellbound-html/">SpellBound</a></li>
-					<li><img src='icon/mud.png' style='height:16px;width:16px;margin-right:10px;'><a href="https://mudjs.plib.dev/">Mud.JS</a></li>
-					<li><img src='icon/dexter.png' style='height:16px;width:16px;margin-right:10px;'><a href="https://dexter.plib.dev">Dexter</a></li>
-					<li><img src='icon/livingdex.png' style='height:16px;width:16px;margin-right:10px;'><a href="https://livingdex.plib.dev">Living Dex</a></li>
-					<li><img src='icon/combatdex.png' style='height:16px;width:16px;margin-right:10px;'><a href="https://combatdex.plib.dev">Combat Dex</a></li>
-					<li><img src='icon/typefinder.png' style='height:16px;width:16px;margin-right:10px;'><a href="https://dexquiz.plib.dev/">Pokedex Quiz</a></li>
-					<li><img src='icon/arena.png' style='height:16px;width:16px;margin-right:10px;'><a href="https://github.com/probably-not-porter/arena">Arena.py</a></li>
-					<li><img src='icon/fish.png' style='height:16px;width:16px;margin-right:10px;'><a href="https://github.com/probably-not-porter/fishtank-sim">Fishtank Sim</a></li>
-					<li><img src='icon/orbit.png' style='height:16px;width:16px;margin-right:10px;'><a href="https://github.com/probably-not-porter/orbit">Orbit.py</a></li>
-					<li><img src='icon/galaga.png' style='height:16px;width:16px;margin-right:10px;'><a href="https://github.com/probably-not-porter/galaga-sprites">8-bit Sprites</a></li>
+					<li><img src='icon/generative.png' class='icon'><a href="https://genart.plib.dev/">Generative Art</a></li>		
+					<li><img src='icon/anybin.png' class='icon'><a href="https://anybin.plib.dev/">Anybin</a></li>
+					<li><img src='icon/mtgpaste.png' class='icon'><a href="https://mtgpaste.plib.dev/">MTGPaste</a></li>
+					<li><img src='icon/items.png' class='icon'><a href="https://items.plib.dev">Random Items</a></li>
+					<li><img src='icon/movietime.png' class='icon'><a href="https://movietime.plib.dev">Movie Time Spinner</a></li>
+					<li><img src='https://images.emojiterra.com/google/android-12l/512px/1f5ff.png' class='icon'><a href="https://chad.plib.dev">Chad Detector</a></li>
+					<li><img src='icon/radio.png' class='icon'><a href="https://radio.plib.dev">Radio Button Olympics</a></li>
+					<li><img src='icon/spellbound.png' class='icon'><a href="https://spellbound-game.github.io/spellbound-html/">SpellBound</a></li>
+					<li><img src='icon/mud.png' class='icon'><a href="https://mudjs.plib.dev/">Mud.JS</a></li>
+					<li><img src='icon/dexter.png' class='icon'><a href="https://dexter.plib.dev">Dexter</a></li>
+					<li><img src='icon/livingdex.png' class='icon'><a href="https://livingdex.plib.dev">Living Dex</a></li>
+					<li><img src='icon/combatdex.png' class='icon'><a href="https://combatdex.plib.dev">Combat Dex</a></li>
+					<li><img src='icon/typefinder.png' class='icon'><a href="https://dexquiz.plib.dev/">Pokedex Quiz</a></li>
+					<li><img src='icon/arena.png' class='icon'><a href="https://github.com/probably-not-porter/arena">Arena.py</a></li>
+					<li><img src='icon/fish.png' class='icon'><a href="https://github.com/probably-not-porter/fishtank-sim">Fishtank Sim</a></li>
+					<li><img src='icon/orbit.png' class='icon'><a href="https://github.com/probably-not-porter/orbit">Orbit.py</a></li>
+					<li><img src='icon/galaga.png' class='icon'><a href="https://github.com/probably-not-porter/galaga-sprites">8-bit Sprites</a></li>
 				</ul>
 				<br>
 				<!-- <li>Research</li>
 				<ul class='subnav'>
 					<li>Composit Edge ML</li>
 					<uL>
-						<li><img src='icon/ml.png' style='height:16px;width:16px;margin-right:10px;'><a href="https://github.com/probably-not-porter/CEML">Code</a></li>
-						<li><img src='icon/ml.png' style='height:16px;width:16px;margin-right:10px;'><a href="https://github.com/probably-not-porter/CEML/blob/master/v1/2020_Paper_Final.pdf">Paper</a></li>
-						<li><img src='icon/ml.png' style='height:16px;width:16px;margin-right:10px;'><a href="https://docs.google.com/spreadsheets/d/1N-e_vyrJXN3rbJQCPIjlvAqpcz-cNIcehn_mqzDBfZk/edit?usp=sharing">Results</a></li>
+						<li><img src='icon/ml.png' class='icon'><a href="https://github.com/probably-not-porter/CEML">Code</a></li>
+						<li><img src='icon/ml.png' class='icon'><a href="https://github.com/probably-not-porter/CEML/blob/master/v1/2020_Paper_Final.pdf">Paper</a></li>
+						<li><img src='icon/ml.png' class='icon'><a href="https://docs.google.com/spreadsheets/d/1N-e_vyrJXN3rbJQCPIjlvAqpcz-cNIcehn_mqzDBfZk/edit?usp=sharing">Results</a></li>
 					</uL>
 					<li>Icelandic Field Studies</li>
 					<uL>
-						<li><img src='icon/ec-ifs.png' style='height:16px;width:16px;margin-right:10px;'><a href="https://fieldscience.cs.earlham.edu/">Blog</a></li>
+						<li><img src='icon/ec-ifs.png' class='icon'><a href="https://fieldscience.cs.earlham.edu/">Blog</a></li>
 					</uL>
 				</ul> -->
 			</ul>
