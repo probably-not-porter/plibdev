@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gradient Following Mouse</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden; /* Prevent scrollbars */
+    }
+    canvas {
+      display: block; /* Removes padding/margin issues */
+      position:absolute;
+      z-index: 0;
+    }
+    #content{
+        position:absolute;
+        z-index: 1;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="gradientCanvas"></canvas>
+
+  <script>
+    const canvas = document.getElementById("gradientCanvas");
+    const ctx = canvas.getContext("2d");
+
+    // Resize canvas to fill the window
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+
+    resizeCanvas();
+    window.addEventListener("resize", resizeCanvas);
+
+    // Mouse position
+    const mouse = { x: canvas.width / 2, y: canvas.height / 2 };
+
+    // Track mouse movements
+    canvas.addEventListener("mousemove", (event) => {
+      mouse.x = event.clientX;
+      mouse.y = event.clientY;
+    });
+
+    function draw() {
+      // Black background
+      ctx.fillStyle = "rgba(30, 30, 30, 1)";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      // Create gradient
+      const gradient = ctx.createRadialGradient(
+        mouse.x, mouse.y, 50, // Inner circle (center at mouse, radius 50)
+        mouse.x, mouse.y, 300 // Outer circle (center at mouse, radius 300)
+      );
+      gradient.addColorStop(0, "rgba(255, 255, 255, 1)"); // White center
+      gradient.addColorStop(1, "rgba(255, 255, 255, 0)"); // Transparent edge
+
+      // Apply gradient
+      ctx.fillStyle = gradient;
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      // Request next frame
+      requestAnimationFrame(draw);
+    }
+
+    draw(); // Start the rendering loop
+  </script>
+</body>
+</html>
