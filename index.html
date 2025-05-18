@@ -1,153 +1,242 @@
 <html>
-	<head>
-		<title>plib.dev</title>
-		<link rel="shortcut icon" type="image/jpg" href="icon/favicon.png"/>
-		<meta content='width=device-width, initial-scale=1' name='viewport'/>
-		<style>
-			@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
-			*{
-				cursor:default;
-			}
-			html{
-				width: 100vw;
-				height: 100vh;
-				position: absolute;
-				overflow-x: hidden;
-				top:0px;
-				margin: 0px;
-			}body{
-				position: absolute;
-				margin: 0;
-				width: 100%;
-				height: 100%;
-				background-color: black;
-			}
-			*{
-				color: white;
-				font-family: monospace;
-			}
-			a{
-				text-decoration: none;
-				transition-duration: 500ms;
-			}
-			a:hover{
-				padding-left: 20px;
-				transition-duration: 500ms;
-				text-decoration: underline dotted white;
-			}
-			h1{
-				margin-left: 20px;
-				text-decoration: underline dotted white;
-			}
-			.title{
-				font-size: 24px;
-				border-bottom: 1px dashed white;
-			}
-			a{
-				color: white;
-				cursor: pointer;
-			}
-			ul{
-				list-style-type: none; /* Remove bullets */
-				padding-left: 20px;
-			}
-			li{
-				color: rgb(184, 184, 184);
-				margin: 2px;
-				width: 220px;
-			}
-			li:hover .icon{
-				animation: flip-icon 1s infinite;
-			}
-			.top{
-				display:inline-block;
-				height: 50px;
-				width: 89vw;
-				padding-right: 5vw;
-				padding-left: 5vw;
-				border-bottom: 1px dashed white;
-			}
-			h1{
-				width: 200px;
-			}
-			.head{
-				padding-top: 10px;
-				margin-left: -14px;
-				display: inline-block;
-				font-size: 30px;
-				width: 100%;
-				font-family: 'Major Mono Display', monospace;
-			}
-			.active a{
-				color: lightpink !important;
-			}
-			#tag{
-				position: fixed;
-				bottom: 10px;
-				right: 10px;
-				font-size: 10px;
-			}
-			.icon{
-  				display: inline-block;
-				height:16px;
-				width:16px;
-				margin-right:10px;
-			}
-			@keyframes flip-icon {
-				0% {
-					transform: rotateY(0deg);
-				}
-				50% {
-					transform: rotateY(180deg);
-				}
-				100% {
-					transform: rotateY(359deg);
-				}
-			}
+    <head>
+        <title>plib.dev</title>
+        <link rel="shortcut icon" type="image/jpg" href="icon/favicon.png" />
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap");
+            * {
+                cursor: default;
+            }
+            html {
+                width: 100vw;
+                height: 100vh;
+                position: absolute;
+                overflow-x: hidden;
+                top: 0px;
+                margin: 0px;
+            }
+            body {
+                position: absolute;
+                margin: 0;
+                width: 100%;
+                height: 100%;
+                background-color: black;
+            }
+            * {
+                color: white;
+                font-family: monospace;
+            }
+            a {
+                text-decoration: none;
+                transition-duration: 500ms;
+            }
+            a:hover {
+                padding-left: 20px;
+                transition-duration: 500ms;
+                text-decoration: underline dotted white;
+            }
+            h1 {
+                margin-left: 20px;
+                text-decoration: underline dotted white;
+            }
+            .title {
+                font-size: 24px;
+                border-bottom: 1px dashed white;
+            }
+            a {
+                color: white;
+                cursor: pointer;
+            }
+            ul {
+                list-style-type: none; /* Remove bullets */
+                padding-left: 20px;
+            }
+            li {
+                color: rgb(184, 184, 184);
+                margin: 2px;
+                width: 220px;
+            }
+            li:hover .icon {
+                animation: flip-icon 1s infinite;
+            }
+            .top {
+                display: inline-block;
+                height: 50px;
+                width: 89vw;
+                padding-right: 5vw;
+                padding-left: 5vw;
+                border-bottom: 1px dashed white;
+            }
+            h1 {
+                width: 200px;
+            }
+            .head {
+                padding-top: 10px;
+                margin-left: -14px;
+                display: inline-block;
+                font-size: 30px;
+                width: 100%;
+                font-family: "Major Mono Display", monospace;
+            }
+            .active a {
+                color: lightpink !important;
+            }
+            #tag {
+                position: fixed;
+                bottom: 10px;
+                right: 10px;
+                font-size: 10px;
+            }
+            .icon {
+                display: inline-block;
+                height: 16px;
+                width: 16px;
+                margin-right: 10px;
+            }
+            @keyframes flip-icon {
+                0% {
+                    transform: rotateY(0deg);
+                }
+                50% {
+                    transform: rotateY(180deg);
+                }
+                100% {
+                    transform: rotateY(359deg);
+                }
+            }
+        </style>
 
-		</style>
-
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	</head>
-	<body>
-		<div class='top'>
-			<div class='head'>
-				PLIB.DEV
-			</div>
-		</div>
-		<div class='scroll-box'>
-			<ul id='nav' style="margin-bottom:100px">
-				<li>Social</li>
-				<ul class='subnav'>
-					<li><img src='icon/github.png' class='icon'><a href="https://github.com/probably-not-porter">Github</a></li>
-					<li><img src='icon/instagram.png' class='icon'><a href="https://www.instagram.com/probably_not_porter">Instagram</a></li>
-				</ul>
-				<br>
-				<li>Projects</li>
-				<ul class='subnav'>
-					<li><img src='icon/generative.png' class='icon'><a href="https://genart.plib.dev/">Generative Art</a></li>
-					<li><img src='icon/anybin.png' class='icon'><a href="https://anybin.plib.dev/">Anybin</a></li>
-					<li><img src='icon/mtgpaste.png' class='icon'><a href="https://mtgpaste.plib.dev/">MTGPaste</a></li>
-					<li><img src='icon/mtgdoku.png' class='icon'><a href="https://mtgdoku.plib.dev/">MTGDoku</a></li>
-					<li><img src='icon/items.png' class='icon'><a href="https://items.plib.dev">Random Items</a></li>
-					<li><img src='icon/movietime.png' class='icon'><a href="https://movietime.plib.dev">Movie Time Spinner</a></li>
-					<li><img src='https://images.emojiterra.com/google/android-12l/512px/1f5ff.png' class='icon'><a href="https://chad.plib.dev">Chad Detector</a></li>
-					<li><img src='icon/radio.png' class='icon'><a href="https://radio.plib.dev">Radio Button Olympics</a></li>
-					<li><img src='icon/spellbound.png' class='icon'><a href="https://spellbound-game.github.io/spellbound-html/">SpellBound</a></li>
-					<li><img src='icon/mud.png' class='icon'><a href="https://mudjs.plib.dev/">Mud.JS</a></li>
-					<li><img src='icon/dexter.png' class='icon'><a href="https://dexter.plib.dev">Dexter</a></li>
-					<li><img src='icon/livingdex.png' class='icon'><a href="https://livingdex.plib.dev">Living Dex</a></li>
-					<li><img src='icon/combatdex.png' class='icon'><a href="https://combatdex.plib.dev">Combat Dex</a></li>
-					<li><img src='icon/typefinder.png' class='icon'><a href="https://dexquiz.plib.dev/">Pokedex Quiz</a></li>
-					<li><img src='icon/spellwriter.png' class='icon'><a href="https://spellwriter.plib.dev/">Spellwriter</a></li>
-					<li><img src='icon/fish.png' class='icon'><a href="https://github.com/probably-not-porter/fishtank-sim">Fishtank Sim</a></li>
-					<li><img src='icon/orbit.png' class='icon'><a href="https://github.com/probably-not-porter/orbit">Orbit.py</a></li>
-					<li><img src='icon/galaga.png' class='icon'><a href="https://github.com/probably-not-porter/galaga-sprites">8-bit Sprites</a></li>
-				</ul>
-				<br>
-			</ul>
-		</div>
-		<div id='tag'>Porter Libby 2025</div>
-		<script defer data-domain="plib.dev" src="https://plausible.plib.dev/js/script.js"></script>
-	</body>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+    </head>
+    <body>
+        <div class="top">
+            <div class="head">PLIB.DEV</div>
+        </div>
+        <div class="scroll-box">
+            <ul id="nav" style="margin-bottom: 100px">
+                <li>Social</li>
+                <ul class="subnav">
+                    <li>
+                        <img src="icon/github.png" class="icon" /><a
+                            href="https://github.com/probably-not-porter"
+                            >Github</a
+                        >
+                    </li>
+                    <li>
+                        <img src="icon/instagram.png" class="icon" /><a
+                            href="https://www.instagram.com/probably_not_porter"
+                            >Instagram</a
+                        >
+                    </li>
+                </ul>
+                <br />
+                <li>Web Tools</li>
+                <ul class="subnav">
+                    <li>
+                        <img src="icon/anybin.png" class="icon" />
+                        <a href="https://anybin.plib.dev/"> Anybin </a>
+                    </li>
+                    <li>
+                        <img src="icon/mtgpaste.png" class="icon" />
+                        <a href="https://mtgpaste.plib.dev/"> MTGPaste </a>
+                    </li>
+                    <li>
+                        <img src="icon/mtgdoku.png" class="icon" />
+                        <a href="https://mtgdoku.plib.dev/"> MTGDoku </a>
+                    </li>
+                    <li>
+                        <img src="icon/items.png" class="icon" />
+                        <a href="https://items.plib.dev"> Random Items </a>
+                    </li>
+                    <li>
+                        <img src="icon/movietime.png" class="icon" />
+                        <a href="https://movietime.plib.dev">
+                            Movie Time Spinner
+                        </a>
+                    </li>
+                    <li>
+                        <img
+                            src="https://images.emojiterra.com/google/android-12l/512px/1f5ff.png"
+                            class="icon"
+                        />
+                        <a href="https://chad.plib.dev"> Chad Detector </a>
+                    </li>
+                    <li>
+                        <img src="icon/radio.png" class="icon" />
+                        <a href="https://radio.plib.dev">
+                            Radio Button Olympics
+                        </a>
+                    </li>
+                    <li>
+                        <img src="icon/dexter.png" class="icon" />
+                        <a href="https://dexter.plib.dev"> Dexter </a>
+                    </li>
+                    <li>
+                        <img src="icon/livingdex.png" class="icon" />
+                        <a href="https://livingdex.plib.dev"> Living Dex </a>
+                    </li>
+                    <li>
+                        <img src="icon/typefinder.png" class="icon" />
+                        <a href="https://dexquiz.plib.dev/"> Pokedex Quiz </a>
+                    </li>
+                    <li>
+                        <img src="icon/spellwriter.png" class="icon" />
+                        <a href="https://spellwriter.plib.dev/">
+                            Spellwriter
+                        </a>
+                    </li>
+                </ul>
+                <br />
+                <li>Art Projects</li>
+                <ul class="subnav">
+                    <li>
+                        <img src="icon/galaga.png" class="icon" />
+                        <a
+                            href="https://github.com/probably-not-porter/galaga-sprites"
+                        >
+                            8-bit Sprites
+                        </a>
+                    </li>
+                    <li>
+                        <img src="icon/generative.png" class="icon" />
+                        <a href="https://genart.plib.dev/"> Generative Art </a>
+                    </li>
+                </ul>
+                <br />
+                <li>Games</li>
+                <ul class="subnav">
+                    <li>
+                        <img src="icon/fish.png" class="icon" />
+                        <a
+                            href="https://github.com/probably-not-porter/fishtank-sim"
+                        >
+                            Fishtank Sim
+                        </a>
+                    </li>
+                    <li>
+                        <img src="icon/mud.png" class="icon" />
+                        <a href="https://mudjs.plib.dev/">Mud.JS</a>
+                    </li>
+                    <li>
+                        <img src="icon/spellbound.png" class="icon" />
+                        <a
+                            href="https://spellbound-game.github.io/spellbound-html/"
+                        >
+                            SpellBound
+                        </a>
+                    </li>
+                </ul>
+            </ul>
+        </div>
+        <div id="tag">Porter Libby 2025</div>
+        <script
+            defer
+            data-domain="plib.dev"
+            src="https://plausible.plib.dev/js/script.js"
+        ></script>
+    </body>
 </html>
